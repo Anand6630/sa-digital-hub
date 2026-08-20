@@ -1,138 +1,458 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="S A DIGITAL HUB - Digital services, printing, Xerox, online forms, designing and more.">
-  <title>S A DIGITAL HUB | Digital Services</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>S A DIGITAL HUB | Online Services</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0d47a1,#1976d2);
+    color:white;
+    padding:25px 15px;
+    text-align:center;
+}
+
+header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+.search-box{
+    max-width:650px;
+    margin:20px auto;
+    display:flex;
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 4px 15px #0002;
+}
+
+.search-box input{
+    flex:1;
+    padding:15px 20px;
+    border:0;
+    outline:0;
+    font-size:16px;
+}
+
+.search-box button{
+    border:0;
+    background:#ff9800;
+    color:white;
+    padding:0 22px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.title h2{
+    color:#0d47a1;
+    margin-bottom:6px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:white;
+    padding:22px 12px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 12px #0001;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 6px 18px #0002;
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.card button{
+    border:0;
+    background:#1976d2;
+    color:white;
+    padding:9px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.quick{
+    margin-top:30px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 12px #0001;
+    text-align:center;
+}
+
+.quick-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:18px;
+}
+
+.quick a{
+    text-decoration:none;
+    color:white;
+    padding:12px 18px;
+    border-radius:25px;
+    background:#25D366;
+}
+
+.call{
+    background:#0d47a1 !important;
+}
+
+footer{
+    margin-top:30px;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:22px 10px;
+}
+
+footer p{
+    margin:5px;
+}
+
+@media(max-width:500px){
+    header h1{
+        font-size:27px;
+    }
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .card{
+        padding:17px 7px;
+    }
+
+    .icon{
+        font-size:32px;
+    }
+
+    .card h3{
+        font-size:14px;
+    }
+}
+</style>
 </head>
+
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="logo" href="#home"><span>SA</span> DIGITAL HUB</a>
-      <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
-      <nav id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="nav-btn" href="#contact">Contact Us</a>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div>
-          <div class="badge">⚡ FAST • RELIABLE • DIGITAL</div>
-          <h1>Welcome to <span>S A DIGITAL HUB</span></h1>
-          <p class="hero-text">Your one-stop destination for digital services, printing, Xerox, online applications, document work and professional designing.</p>
-          <div class="hero-actions">
-            <a class="btn primary" href="#services">Explore Services</a>
-            <a class="btn secondary" id="heroWhatsApp" href="#" target="_blank">💬 WhatsApp Us</a>
-          </div>
-          <div class="trust">
-            <div><strong>100%</strong><small>Digital Support</small></div>
-            <div><strong>Quick</strong><small>Service</small></div>
-            <div><strong>Easy</strong><small>Process</small></div>
-          </div>
-        </div>
-        <div class="hero-card">
-          <div class="floating one">🖨️</div>
-          <div class="floating two">💻</div>
-          <div class="hero-icon">SA</div>
-          <h3>S A DIGITAL HUB</h3>
-          <p>Digital • Print • Design • Online</p>
-          <div class="mini-grid">
-            <div>📄 Printing</div><div>📑 Xerox</div>
-            <div>📝 Online Forms</div><div>🎨 Designing</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<header>
 
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-head">
-          <span>WHAT WE DO</span>
-          <h2>Our Popular Services</h2>
-          <p>Everything you need for everyday digital and document work.</p>
-        </div>
-        <div class="cards">
-          <article class="card"><div class="icon">🖨️</div><h3>Printing & Xerox</h3><p>Black & white and colour printing, Xerox and document copies.</p></article>
-          <article class="card"><div class="icon">💻</div><h3>Online Services</h3><p>Online applications, registrations, forms and digital assistance.</p></article>
-          <article class="card"><div class="icon">🎨</div><h3>Graphic Designing</h3><p>Visiting cards, posters, banners, invitations and professional designs.</p></article>
-          <article class="card"><div class="icon">📄</div><h3>Document Work</h3><p>Scanning, PDF work, typing, photocopying and document preparation.</p></article>
-          <article class="card"><div class="icon">🪪</div><h3>Photo & ID Work</h3><p>Photo printing and basic ID/document-related digital services.</p></article>
-          <article class="card"><div class="icon">📱</div><h3>Digital Assistance</h3><p>Help with everyday online and digital tasks in a simple way.</p></article>
-        </div>
-      </div>
-    </section>
+<h1>💻 S A DIGITAL HUB</h1>
 
-    <section class="section dark" id="about">
-      <div class="container about-grid">
-        <div>
-          <span class="eyebrow">ABOUT US</span>
-          <h2>Your Local Digital Partner</h2>
-          <p>S A DIGITAL HUB is designed to make digital, printing and document-related work simple and convenient. We focus on quick service, clear communication and customer-friendly support.</p>
-          <ul>
-            <li>✓ Professional digital services</li>
-            <li>✓ Convenient document solutions</li>
-            <li>✓ Fast and customer-friendly support</li>
-            <li>✓ One place for multiple digital needs</li>
-          </ul>
-        </div>
-        <div class="stats">
-          <div><strong>01</strong><span>Digital Services</span></div>
-          <div><strong>02</strong><span>Printing & Xerox</span></div>
-          <div><strong>03</strong><span>Designing</span></div>
-          <div><strong>04</strong><span>Online Support</span></div>
-        </div>
-      </div>
-    </section>
+<p>All Online Services – Ek Hi Jagah</p>
 
-    <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <div class="section-head left">
-            <span>GET IN TOUCH</span>
-            <h2>Contact S A DIGITAL HUB</h2>
-            <p>For service enquiries, message us on WhatsApp or call us.</p>
-          </div>
-          <div class="contact-list">
-            <div><b>📞 Phone</b><span id="phoneText">+91 8789202269</span></div>
-            <div><b>💬 WhatsApp</b><span>Quick enquiry & support</span></div>
-            <div><b>📍 Address</b><span>VRINDABAN TWIN CITY, CHHOTA GOVINDPUR, JAMSHEDPUR</span></div>
-            <div><b>🕒 Timing</b><span>10:00 AM to 10:00 PM</span></div>
-          </div>
-          <a class="btn primary wide" id="contactWhatsApp" href="#" target="_blank">💬 Chat on WhatsApp</a>
-        </div>
-        <form class="contact-form" id="contactForm">
-          <h3>Send an Enquiry</h3>
-          <input id="name" type="text" placeholder="Your Name" required>
-          <input id="phone" type="tel" placeholder="Mobile Number" required>
-          <textarea id="message" rows="5" placeholder="What service do you need?" required></textarea>
-          <button class="btn primary" type="submit">Send on WhatsApp</button>
-          <small>Your message will open in WhatsApp for sending.</small>
-        </form>
-      </div>
-    </section>
-  </main>
+<div class="search-box">
 
-  <footer>
-    <div class="container footer">
-      <div><a class="logo" href="#home"><span>SA</span> DIGITAL HUB</a><p>Digital • Print • Design • Online</p></div>
-      <div class="footer-links"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-    </div>
-    <div class="copyright">© <span id="year"></span> S A DIGITAL HUB. All rights reserved.</div>
-  </footer>
+<input
+type="text"
+id="search"
+placeholder="Search Service..."
+onkeyup="searchService()">
 
-  <a class="floating-wa" id="floatingWhatsApp" href="#" target="_blank" aria-label="WhatsApp">💬</a>
-  <script src="script.js"></script>
+<button onclick="searchService()">🔍 Search</button>
+
+</div>
+
+</header>
+
+
+<div class="container">
+
+<div class="title">
+
+<h2>📌 Online Services</h2>
+
+<p>Apni zarurat ki service select karein</p>
+
+</div>
+
+
+<div class="services" id="services">
+
+
+<div class="card">
+
+<div class="icon">🪪</div>
+
+<h3>Aadhaar Services</h3>
+
+<button onclick="serviceAlert('Aadhaar Services')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🧾</div>
+
+<h3>PAN Card</h3>
+
+<button onclick="serviceAlert('PAN Card')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🚗</div>
+
+<h3>Driving Licence</h3>
+
+<button onclick="serviceAlert('Driving Licence')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🚘</div>
+
+<h3>Vehicle Services</h3>
+
+<button onclick="serviceAlert('Vehicle Services')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🏛️</div>
+
+<h3>Government Services</h3>
+
+<button onclick="serviceAlert('Government Services')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💰</div>
+
+<h3>Recharge & Bill</h3>
+
+<button onclick="serviceAlert('Recharge & Bill Payment')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📄</div>
+
+<h3>PDF Services</h3>
+
+<button onclick="serviceAlert('PDF Services')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🖨️</div>
+
+<h3>Print / Xerox / Scan</h3>
+
+<button onclick="serviceAlert('Print Xerox Scan')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📸</div>
+
+<h3>Photo Resize</h3>
+
+<button onclick="serviceAlert('Photo Resize')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📋</div>
+
+<h3>Resume / CV</h3>
+
+<button onclick="serviceAlert('Resume / CV')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🧮</div>
+
+<h3>GST Services</h3>
+
+<button onclick="serviceAlert('GST Services')">
+Start Service
+</button>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🎫</div>
+
+<h3>Ticket Booking</h3>
+
+<button onclick="serviceAlert('Ticket Booking')">
+Start Service
+</button>
+
+</div>
+
+
+</div>
+
+
+<div class="quick">
+
+<h2>⚡ Quick Contact</h2>
+
+<p>Online service ke liye humse contact karein</p>
+
+<div class="quick-buttons">
+
+<a href="https://wa.me/" target="_blank">
+💬 WhatsApp
+</a>
+
+<a href="tel:" class="call">
+📞 Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p><strong>S A DIGITAL HUB</strong></p>
+
+<p>Digital Services | Online Services | Document Services</p>
+
+<p>© 2026 S A DIGITAL HUB</p>
+
+</footer>
+
+
+<script>
+
+function serviceAlert(service){
+
+alert(
+service +
+"\n\nYe service jald hi S A DIGITAL HUB par available hogi."
+);
+
+}
+
+
+function searchService(){
+
+let input =
+document.getElementById("search").value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
+
 </body>
-</html>
+  </html>
