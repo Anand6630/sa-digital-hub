@@ -2,213 +2,38 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>S A DIGITAL HUB | Online Service Portal</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>S A DIGITAL HUB</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:#f4f7fb;
-    color:#222;
-}
-
-header{
-    background:linear-gradient(135deg,#0d47a1,#1976d2);
-    color:white;
-    text-align:center;
-    padding:28px 15px;
-}
-
-header h1{
-    font-size:32px;
-    margin-bottom:8px;
-}
-
-header p{
-    font-size:16px;
-}
-
-.search{
-    max-width:650px;
-    margin:20px auto 0;
-}
-
-.search input{
-    width:100%;
-    padding:14px 18px;
-    border:0;
-    border-radius:30px;
-    outline:none;
-    font-size:16px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:25px 15px;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.title h2{
-    color:#0d47a1;
-    margin-bottom:6px;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:15px;
-}
-
-.card{
-    background:white;
-    padding:22px 12px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 3px 12px #0001;
-}
-
-.icon{
-    font-size:38px;
-    margin-bottom:10px;
-}
-
-.card h3{
-    font-size:16px;
-    margin-bottom:12px;
-}
-
-.card button{
-    background:#1976d2;
-    color:white;
-    border:0;
-    padding:10px 16px;
-    border-radius:20px;
-    cursor:pointer;
-}
-
-.form-box{
-    background:white;
-    margin-top:30px;
-    padding:25px;
-    border-radius:18px;
-    box-shadow:0 3px 15px #0002;
-}
-
-.form-box h2{
-    color:#0d47a1;
-    text-align:center;
-    margin-bottom:20px;
-}
-
-.form-group{
-    margin-bottom:15px;
-}
-
-.form-group label{
-    display:block;
-    margin-bottom:6px;
-    font-weight:bold;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-    width:100%;
-    padding:13px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:15px;
-    outline:none;
-}
-
-.form-group textarea{
-    min-height:100px;
-    resize:vertical;
-}
-
-.whatsapp{
-    width:100%;
-    padding:14px;
-    border:0;
-    border-radius:25px;
-    background:#25D366;
-    color:white;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.note{
-    margin-top:12px;
-    font-size:13px;
-    color:#666;
-    text-align:center;
-}
-
-.contact{
-    margin-top:25px;
-    background:white;
-    padding:25px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 3px 12px #0001;
-}
-
-.contact a{
-    display:inline-block;
-    margin-top:15px;
-    padding:12px 22px;
-    border-radius:25px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-}
-
-footer{
-    margin-top:30px;
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:22px 10px;
-}
-
-footer p{
-    margin:5px;
-}
-
+*{box-sizing:border-box;font-family:Arial;margin:0;padding:0}
+body{background:#f4f7fb;color:#222}
+header{background:linear-gradient(135deg,#0d47a1,#1976d2);color:white;text-align:center;padding:28px 15px}
+header h1{font-size:32px;margin-bottom:8px}
+.container{max-width:1100px;margin:auto;padding:25px 15px}
+.title{text-align:center;margin-bottom:20px}
+.title h2{color:#0d47a1}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px}
+.card{background:white;padding:22px 10px;text-align:center;border-radius:15px;box-shadow:0 3px 12px #0001}
+.icon{font-size:38px;margin-bottom:10px}
+.card h3{font-size:16px;margin-bottom:12px}
+.card button,.resize-btn{background:#1976d2;color:white;border:0;padding:10px 16px;border-radius:20px;cursor:pointer}
+.form-box{background:white;margin-top:30px;padding:25px;border-radius:18px;box-shadow:0 3px 15px #0002}
+.form-box h2{text-align:center;color:#0d47a1;margin-bottom:20px}
+.form-group{margin-bottom:15px}
+label{display:block;font-weight:bold;margin-bottom:6px}
+input,select{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px}
+.dimensions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+#preview{max-width:100%;max-height:350px;margin:15px auto;display:block;border-radius:8px}
+.result{text-align:center;margin-top:20px}
+.download{display:inline-block;background:#25D366;color:white;text-decoration:none;padding:12px 20px;border-radius:25px;font-weight:bold}
+.hidden{display:none}
+.note{text-align:center;color:#666;font-size:13px;margin-top:10px}
+footer{margin-top:30px;background:#111;color:white;text-align:center;padding:22px}
 @media(max-width:500px){
-    header h1{
-        font-size:27px;
-    }
-
-    .services{
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    .card{
-        padding:17px 7px;
-    }
-
-    .icon{
-        font-size:32px;
-    }
-
-    .card h3{
-        font-size:14px;
-    }
+header h1{font-size:27px}
+.services{grid-template-columns:repeat(2,1fr);gap:10px}
+.dimensions{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -216,207 +41,127 @@ footer p{
 <body>
 
 <header>
-
 <h1>💻 S A DIGITAL HUB</h1>
-
 <p>All Online Services – Ek Hi Jagah</p>
-
-<div class="search">
-<input
-type="text"
-id="search"
-placeholder="🔍 Search Service..."
-onkeyup="searchService()">
-</div>
-
 </header>
-
 
 <div class="container">
 
 <div class="title">
-<h2>📌 Our Online Services</h2>
-<p>Apni service select karke request bhejein</p>
+<h2>📌 Online Services</h2>
+<p>Apni service select karein</p>
 </div>
 
-
 <div class="services">
-
 
 <div class="card">
 <div class="icon">🪪</div>
 <h3>Aadhaar Services</h3>
-<button onclick="selectService('Aadhaar Services')">Request</button>
+<button onclick="alert('Aadhaar service request ke liye neeche form use karein.')">Request</button>
 </div>
-
 
 <div class="card">
 <div class="icon">🧾</div>
 <h3>PAN Card</h3>
-<button onclick="selectService('PAN Card')">Request</button>
+<button onclick="alert('PAN service request ke liye neeche form use karein.')">Request</button>
 </div>
-
 
 <div class="card">
 <div class="icon">🚗</div>
 <h3>Driving Licence</h3>
-<button onclick="selectService('Driving Licence')">Request</button>
+<button onclick="alert('Driving Licence service request ke liye neeche form use karein.')">Request</button>
 </div>
-
-
-<div class="card">
-<div class="icon">🚘</div>
-<h3>Vehicle Services</h3>
-<button onclick="selectService('Vehicle Services')">Request</button>
-</div>
-
-
-<div class="card">
-<div class="icon">🏛️</div>
-<h3>Government Services</h3>
-<button onclick="selectService('Government Services')">Request</button>
-</div>
-
-
-<div class="card">
-<div class="icon">💰</div>
-<h3>Recharge & Bill Payment</h3>
-<button onclick="selectService('Recharge & Bill Payment')">Request</button>
-</div>
-
-
-<div class="card">
-<div class="icon">📄</div>
-<h3>PDF & Document</h3>
-<button onclick="selectService('PDF & Document Services')">Request</button>
-</div>
-
 
 <div class="card">
 <div class="icon">🖨️</div>
-<h3>Print / Xerox / Scan</h3>
-<button onclick="selectService('Print / Xerox / Scan')">Request</button>
+<h3>Print / Xerox</h3>
+<button onclick="alert('Print/Xerox service request ke liye neeche form use karein.')">Request</button>
 </div>
 
+<div class="card">
+<div class="icon">📄</div>
+<h3>PDF Services</h3>
+<button onclick="alert('PDF service request ke liye neeche form use karein.')">Request</button>
+</div>
 
 <div class="card">
 <div class="icon">📸</div>
 <h3>Photo Resize</h3>
-<button onclick="selectService('Photo Resize')">Request</button>
+<button onclick="openResize()">Open</button>
 </div>
-
 
 <div class="card">
 <div class="icon">📋</div>
 <h3>Resume / CV</h3>
-<button onclick="selectService('Resume / CV')">Request</button>
+<button onclick="alert('Resume service request ke liye neeche form use karein.')">Request</button>
 </div>
-
 
 <div class="card">
-<div class="icon">🧮</div>
-<h3>GST Services</h3>
-<button onclick="selectService('GST Services')">Request</button>
+<div class="icon">🏛️</div>
+<h3>Government Services</h3>
+<button onclick="alert('Government service request ke liye neeche form use karein.')">Request</button>
 </div>
-
-
-<div class="card">
-<div class="icon">🎫</div>
-<h3>Ticket Booking</h3>
-<button onclick="selectService('Ticket Booking')">Request</button>
-</div>
-
 
 </div>
 
 
-<div class="form-box" id="requestForm">
+<!-- PHOTO RESIZE -->
 
-<h2>📝 Service Request Form</h2>
+<div class="form-box hidden" id="resizeBox">
 
+<h2>📸 Custom Photo Resize</h2>
 
 <div class="form-group">
-
-<label>Customer Name *</label>
-
-<input
-type="text"
-id="name"
-placeholder="Apna naam likhein">
-
+<label>Photo Select Karein</label>
+<input type="file" id="photoInput" accept="image/*" onchange="loadPhoto()">
 </div>
 
-
 <div class="form-group">
+<label>Unit</label>
 
-<label>Mobile Number *</label>
-
-<input
-type="tel"
-id="mobile"
-placeholder="10 digit mobile number"
-maxlength="10">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Select Service *</label>
-
-<select id="service">
-
-<option value="">-- Service Select Karein --</option>
-
-<option>Aadhaar Services</option>
-<option>PAN Card</option>
-<option>Driving Licence</option>
-<option>Vehicle Services</option>
-<option>Government Services</option>
-<option>Recharge & Bill Payment</option>
-<option>PDF & Document Services</option>
-<option>Print / Xerox / Scan</option>
-<option>Photo Resize</option>
-<option>Resume / CV</option>
-<option>GST Services</option>
-<option>Ticket Booking</option>
-
+<select id="unit">
+<option value="px">Pixels</option>
+<option value="mm">Millimeter (mm)</option>
+<option value="cm">Centimeter (cm)</option>
+<option value="in">Inch</option>
 </select>
 
 </div>
 
+<div class="dimensions">
 
 <div class="form-group">
+<label>Width</label>
+<input type="number" id="width" placeholder="Width">
+</div>
 
-<label>Apne kaam ki details likhein *</label>
+<div class="form-group">
+<label>Height</label>
+<input type="number" id="height" placeholder="Height">
+</div>
 
-<textarea
-id="details"
-placeholder="Aapko kaunsa kaam karwana hai?"></textarea>
+<div class="form-group">
+<label>Quality</label>
+<select id="quality">
+<option value="0.9">High</option>
+<option value="0.75">Medium</option>
+<option value="0.6">Small File</option>
+</select>
+</div>
 
 </div>
 
+<img id="preview" class="hidden">
 
-<button class="whatsapp" onclick="sendWhatsApp()">
-💬 WhatsApp par Request Bhejein
+<button class="resize-btn" onclick="resizePhoto()">
+🖼️ Resize Photo
 </button>
 
+<div class="result" id="result"></div>
+
 <p class="note">
-Sensitive information jaise OTP, password, PIN ya banking details yahan na bhejein.
+Example: 35 × 45 mm passport photo ke liye Width 35 aur Height 45 select karein.
 </p>
-
-</div>
-
-
-<div class="contact">
-
-<h2>📞 S A DIGITAL HUB</h2>
-
-<p>Online service ke liye WhatsApp karein</p>
-
-<a href="https://wa.me/918789202269" target="_blank">
-💬 WhatsApp Now
-</a>
 
 </div>
 
@@ -424,119 +169,143 @@ Sensitive information jaise OTP, password, PIN ya banking details yahan na bheje
 
 
 <footer>
-
-<p><strong>S A DIGITAL HUB</strong></p>
-
-<p>Online Services | Digital Services | Document Services</p>
-
+<strong>S A DIGITAL HUB</strong>
+<p>Online Services | Digital Services</p>
 <p>© 2026 S A DIGITAL HUB</p>
-
 </footer>
 
 
 <script>
 
-function selectService(service){
+let selectedImage=null;
 
-document.getElementById("service").value=service;
+function openResize(){
 
-document.getElementById("requestForm")
-.scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById("resizeBox")
+.classList.remove("hidden");
+
+document.getElementById("resizeBox")
+.scrollIntoView({behavior:"smooth"});
 
 }
 
 
-function sendWhatsApp(){
+function loadPhoto(){
 
-let name =
-document.getElementById("name").value.trim();
+let file=document.getElementById("photoInput").files[0];
 
-let mobile =
-document.getElementById("mobile").value.trim();
+if(!file)return;
 
-let service =
-document.getElementById("service").value;
+let reader=new FileReader();
 
-let details =
-document.getElementById("details").value.trim();
+reader.onload=function(e){
+
+selectedImage=new Image();
+
+selectedImage.onload=function(){
+
+let preview=document.getElementById("preview");
+
+preview.src=e.target.result;
+preview.classList.remove("hidden");
+
+};
+
+selectedImage.src=e.target.result;
+
+};
+
+reader.readAsDataURL(file);
+
+}
 
 
-if(name===""){
-alert("Please apna naam likhein.");
+function resizePhoto(){
+
+if(!selectedImage){
+
+alert("Pehle photo select karein.");
 return;
+
 }
 
+let width=parseFloat(document.getElementById("width").value);
+let height=parseFloat(document.getElementById("height").value);
+let unit=document.getElementById("unit").value;
+let quality=parseFloat(document.getElementById("quality").value);
 
-if(!/^[0-9]{10}$/.test(mobile)){
-alert("Please sahi 10 digit mobile number dalein.");
+if(!width || !height){
+
+alert("Width aur Height dalein.");
 return;
+
 }
 
 
-if(service===""){
-alert("Please service select karein.");
+/* Convert dimensions to pixels */
+
+let w=width;
+let h=height;
+
+if(unit==="mm"){
+
+w=Math.round(width*96/25.4);
+h=Math.round(height*96/25.4);
+
+}
+
+if(unit==="cm"){
+
+w=Math.round(width*96/2.54);
+h=Math.round(height*96/2.54);
+
+}
+
+if(unit==="in"){
+
+w=Math.round(width*96);
+h=Math.round(height*96);
+
+}
+
+
+/* Maximum protection against extremely large images */
+
+if(w>5000 || h>5000){
+
+alert("Maximum size 5000 × 5000 pixels rakhein.");
 return;
-}
-
-
-if(details===""){
-alert("Please apne kaam ki details likhein.");
-return;
-}
-
-
-let message =
-"🟢 NEW SERVICE REQUEST\n\n" +
-"👤 Name: " + name + "\n" +
-"📱 Mobile: " + mobile + "\n" +
-"🛠️ Service: " + service + "\n" +
-"📝 Details: " + details + "\n\n" +
-"📍 S A DIGITAL HUB";
-
-
-let whatsappURL =
-"https://wa.me/918789202269?text=" +
-encodeURIComponent(message);
-
-
-window.open(whatsappURL,"_blank");
 
 }
 
 
-function searchService(){
+let canvas=document.createElement("canvas");
 
-let search =
-document.getElementById("search")
-.value
-.toLowerCase();
+canvas.width=w;
+canvas.height=h;
 
-let cards =
-document.querySelectorAll(".card");
+let ctx=canvas.getContext("2d");
 
+ctx.drawImage(selectedImage,0,0,w,h);
 
-cards.forEach(function(card){
+let output=canvas.toDataURL("image/jpeg",quality);
 
-let text =
-card.innerText.toLowerCase();
+let link=document.createElement("a");
 
-if(text.includes(search)){
+link.href=output;
+link.download="SA-DIGITAL-HUB-resized-photo.jpg";
 
-card.style.display="block";
+link.className="download";
+link.innerText="⬇️ Download Resized Photo";
 
-}else{
+let result=document.getElementById("result");
 
-card.style.display="none";
-
-}
-
-});
+result.innerHTML="";
+result.appendChild(link);
 
 }
 
 </script>
 
 </body>
-</html>
+  </html>
