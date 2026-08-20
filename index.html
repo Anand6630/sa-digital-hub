@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>S A DIGITAL HUB | Online Services</title>
+<title>S A DIGITAL HUB | Online Service Portal</title>
 
 <style>
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
@@ -22,8 +22,8 @@ body{
 header{
     background:linear-gradient(135deg,#0d47a1,#1976d2);
     color:white;
-    padding:25px 15px;
     text-align:center;
+    padding:28px 15px;
 }
 
 header h1{
@@ -35,31 +35,18 @@ header p{
     font-size:16px;
 }
 
-.search-box{
+.search{
     max-width:650px;
-    margin:20px auto;
-    display:flex;
-    background:white;
+    margin:20px auto 0;
+}
+
+.search input{
+    width:100%;
+    padding:14px 18px;
+    border:0;
     border-radius:30px;
-    overflow:hidden;
-    box-shadow:0 4px 15px #0002;
-}
-
-.search-box input{
-    flex:1;
-    padding:15px 20px;
-    border:0;
-    outline:0;
+    outline:none;
     font-size:16px;
-}
-
-.search-box button{
-    border:0;
-    background:#ff9800;
-    color:white;
-    padding:0 22px;
-    font-size:16px;
-    cursor:pointer;
 }
 
 .container{
@@ -90,12 +77,6 @@ header p{
     border-radius:15px;
     text-align:center;
     box-shadow:0 3px 12px #0001;
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 6px 18px #0002;
 }
 
 .icon{
@@ -104,46 +85,95 @@ header p{
 }
 
 .card h3{
-    font-size:17px;
+    font-size:16px;
     margin-bottom:12px;
 }
 
 .card button{
-    border:0;
     background:#1976d2;
     color:white;
-    padding:9px 15px;
+    border:0;
+    padding:10px 16px;
     border-radius:20px;
     cursor:pointer;
 }
 
-.quick{
-    margin-top:30px;
+.form-box{
     background:white;
+    margin-top:30px;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 3px 12px #0001;
+    border-radius:18px;
+    box-shadow:0 3px 15px #0002;
+}
+
+.form-box h2{
+    color:#0d47a1;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+}
+
+.form-group textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.whatsapp{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:25px;
+    background:#25D366;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.note{
+    margin-top:12px;
+    font-size:13px;
+    color:#666;
     text-align:center;
 }
 
-.quick-buttons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:12px;
-    margin-top:18px;
+.contact{
+    margin-top:25px;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 3px 12px #0001;
 }
 
-.quick a{
-    text-decoration:none;
-    color:white;
-    padding:12px 18px;
+.contact a{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 22px;
     border-radius:25px;
     background:#25D366;
-}
-
-.call{
-    background:#0d47a1 !important;
+    color:white;
+    text-decoration:none;
 }
 
 footer{
@@ -191,16 +221,12 @@ footer p{
 
 <p>All Online Services – Ek Hi Jagah</p>
 
-<div class="search-box">
-
+<div class="search">
 <input
 type="text"
 id="search"
-placeholder="Search Service..."
+placeholder="🔍 Search Service..."
 onkeyup="searchService()">
-
-<button onclick="searchService()">🔍 Search</button>
-
 </div>
 
 </header>
@@ -209,193 +235,188 @@ onkeyup="searchService()">
 <div class="container">
 
 <div class="title">
-
-<h2>📌 Online Services</h2>
-
-<p>Apni zarurat ki service select karein</p>
-
+<h2>📌 Our Online Services</h2>
+<p>Apni service select karke request bhejein</p>
 </div>
 
 
-<div class="services" id="services">
+<div class="services">
 
 
 <div class="card">
-
 <div class="icon">🪪</div>
-
 <h3>Aadhaar Services</h3>
-
-<button onclick="serviceAlert('Aadhaar Services')">
-Start Service
-</button>
-
+<button onclick="selectService('Aadhaar Services')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🧾</div>
-
 <h3>PAN Card</h3>
-
-<button onclick="serviceAlert('PAN Card')">
-Start Service
-</button>
-
+<button onclick="selectService('PAN Card')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🚗</div>
-
 <h3>Driving Licence</h3>
-
-<button onclick="serviceAlert('Driving Licence')">
-Start Service
-</button>
-
+<button onclick="selectService('Driving Licence')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🚘</div>
-
 <h3>Vehicle Services</h3>
-
-<button onclick="serviceAlert('Vehicle Services')">
-Start Service
-</button>
-
+<button onclick="selectService('Vehicle Services')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🏛️</div>
-
 <h3>Government Services</h3>
-
-<button onclick="serviceAlert('Government Services')">
-Start Service
-</button>
-
+<button onclick="selectService('Government Services')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">💰</div>
-
-<h3>Recharge & Bill</h3>
-
-<button onclick="serviceAlert('Recharge & Bill Payment')">
-Start Service
-</button>
-
+<h3>Recharge & Bill Payment</h3>
+<button onclick="selectService('Recharge & Bill Payment')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">📄</div>
-
-<h3>PDF Services</h3>
-
-<button onclick="serviceAlert('PDF Services')">
-Start Service
-</button>
-
+<h3>PDF & Document</h3>
+<button onclick="selectService('PDF & Document Services')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🖨️</div>
-
 <h3>Print / Xerox / Scan</h3>
-
-<button onclick="serviceAlert('Print Xerox Scan')">
-Start Service
-</button>
-
+<button onclick="selectService('Print / Xerox / Scan')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">📸</div>
-
 <h3>Photo Resize</h3>
-
-<button onclick="serviceAlert('Photo Resize')">
-Start Service
-</button>
-
+<button onclick="selectService('Photo Resize')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">📋</div>
-
 <h3>Resume / CV</h3>
-
-<button onclick="serviceAlert('Resume / CV')">
-Start Service
-</button>
-
+<button onclick="selectService('Resume / CV')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🧮</div>
-
 <h3>GST Services</h3>
-
-<button onclick="serviceAlert('GST Services')">
-Start Service
-</button>
-
+<button onclick="selectService('GST Services')">Request</button>
 </div>
 
 
 <div class="card">
-
 <div class="icon">🎫</div>
-
 <h3>Ticket Booking</h3>
+<button onclick="selectService('Ticket Booking')">Request</button>
+</div>
 
-<button onclick="serviceAlert('Ticket Booking')">
-Start Service
+
+</div>
+
+
+<div class="form-box" id="requestForm">
+
+<h2>📝 Service Request Form</h2>
+
+
+<div class="form-group">
+
+<label>Customer Name *</label>
+
+<input
+type="text"
+id="name"
+placeholder="Apna naam likhein">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile Number *</label>
+
+<input
+type="tel"
+id="mobile"
+placeholder="10 digit mobile number"
+maxlength="10">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Select Service *</label>
+
+<select id="service">
+
+<option value="">-- Service Select Karein --</option>
+
+<option>Aadhaar Services</option>
+<option>PAN Card</option>
+<option>Driving Licence</option>
+<option>Vehicle Services</option>
+<option>Government Services</option>
+<option>Recharge & Bill Payment</option>
+<option>PDF & Document Services</option>
+<option>Print / Xerox / Scan</option>
+<option>Photo Resize</option>
+<option>Resume / CV</option>
+<option>GST Services</option>
+<option>Ticket Booking</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Apne kaam ki details likhein *</label>
+
+<textarea
+id="details"
+placeholder="Aapko kaunsa kaam karwana hai?"></textarea>
+
+</div>
+
+
+<button class="whatsapp" onclick="sendWhatsApp()">
+💬 WhatsApp par Request Bhejein
 </button>
 
+<p class="note">
+Sensitive information jaise OTP, password, PIN ya banking details yahan na bhejein.
+</p>
+
 </div>
 
 
-</div>
+<div class="contact">
 
+<h2>📞 S A DIGITAL HUB</h2>
 
-<div class="quick">
+<p>Online service ke liye WhatsApp karein</p>
 
-<h2>⚡ Quick Contact</h2>
-
-<p>Online service ke liye humse contact karein</p>
-
-<div class="quick-buttons">
-
-<a href="https://wa.me/" target="_blank">
-💬 WhatsApp
+<a href="https://wa.me/918789202269" target="_blank">
+💬 WhatsApp Now
 </a>
-
-<a href="tel:" class="call">
-📞 Call Now
-</a>
-
-</div>
 
 </div>
 
@@ -406,7 +427,7 @@ Start Service
 
 <p><strong>S A DIGITAL HUB</strong></p>
 
-<p>Digital Services | Online Services | Document Services</p>
+<p>Online Services | Digital Services | Document Services</p>
 
 <p>© 2026 S A DIGITAL HUB</p>
 
@@ -415,30 +436,93 @@ Start Service
 
 <script>
 
-function serviceAlert(service){
+function selectService(service){
 
-alert(
-service +
-"\n\nYe service jald hi S A DIGITAL HUB par available hogi."
-);
+document.getElementById("service").value=service;
+
+document.getElementById("requestForm")
+.scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+function sendWhatsApp(){
+
+let name =
+document.getElementById("name").value.trim();
+
+let mobile =
+document.getElementById("mobile").value.trim();
+
+let service =
+document.getElementById("service").value;
+
+let details =
+document.getElementById("details").value.trim();
+
+
+if(name===""){
+alert("Please apna naam likhein.");
+return;
+}
+
+
+if(!/^[0-9]{10}$/.test(mobile)){
+alert("Please sahi 10 digit mobile number dalein.");
+return;
+}
+
+
+if(service===""){
+alert("Please service select karein.");
+return;
+}
+
+
+if(details===""){
+alert("Please apne kaam ki details likhein.");
+return;
+}
+
+
+let message =
+"🟢 NEW SERVICE REQUEST\n\n" +
+"👤 Name: " + name + "\n" +
+"📱 Mobile: " + mobile + "\n" +
+"🛠️ Service: " + service + "\n" +
+"📝 Details: " + details + "\n\n" +
+"📍 S A DIGITAL HUB";
+
+
+let whatsappURL =
+"https://wa.me/918789202269?text=" +
+encodeURIComponent(message);
+
+
+window.open(whatsappURL,"_blank");
 
 }
 
 
 function searchService(){
 
-let input =
-document.getElementById("search").value.toLowerCase();
+let search =
+document.getElementById("search")
+.value
+.toLowerCase();
 
 let cards =
 document.querySelectorAll(".card");
+
 
 cards.forEach(function(card){
 
 let text =
 card.innerText.toLowerCase();
 
-if(text.includes(input)){
+if(text.includes(search)){
 
 card.style.display="block";
 
@@ -455,4 +539,4 @@ card.style.display="none";
 </script>
 
 </body>
-  </html>
+</html>
